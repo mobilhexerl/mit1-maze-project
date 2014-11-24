@@ -1,0 +1,18 @@
+#Informationen für Projektmitglieder
+
+= Welcome to Maze-Project=
+== Rules-Base ==
+
+  * Please download TortoiseSVN to commit source files for our project.
+
+  * Please document every change detailed before you commit.
+
+  * Please add documentation pages to our Wiki so that everybody can understand the work undertaken and proceed with coding.
+
+
+==Details ==
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
