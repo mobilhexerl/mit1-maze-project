@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= Welcome to our Algorithms Maze Project=
+
+Everybody should document er/his changes detailled so that every contributing member can follow the project.
+
+Please install Tortoise svn from http://subversion.apache.org/download/ to contribute source code.
+
+And last but not least as Mr Mehnen would say: Have fun! :)
+
+
+= Details =
+
+stay tuned ...
+
+or start documenting 
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
