@@ -1,8 +1,12 @@
-#summary One-sentence summary of this page.
+#Information for Project Members
+= Welcome to Maze-Project=
+==Rules-Base==
 
-= Welcome to our Maze Project =
+  * Please download TortoiseSVN to commit source files for our project. 
 
-Add your content here.
+  * Please document every change detailed before you commit. 
+
+  * Please add documentation pages to our Wiki so that everybody can understand the work undertaken and proceed with coding. 
 
 
 = Details =
