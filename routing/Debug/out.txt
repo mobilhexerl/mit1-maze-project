@@ -1,75 +1,151 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X             X               X
+X      X                                        X  X
+X                               X                  X
+X  X                          X                    X
+X                                        XX        X
+X                                              X   X
+X                                      X           X
+X            X                             X       X
+X                      X     X                     X
+X                                     X            X
+X                X                                 X
+X   X                       X             X        X
+X                   X                              X
+X                     X                            X
+X            X          X                          X
+X                                                  X
+X           X         X X                          X
+X                                        XX   X    X
+X   X                                              X
+X                                   X           X  X
+X     X            X                               X
+X                                                  X
+X                                                  X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
 Path0
-Start x: 4
-Start y: 0
-Goal x: 24
-Goal y: 6
-0:4
-1:5
-2:6
-3:7
-3:8
-4:9
-4:10
-4:11
-4:12
-4:13
-4:14
-4:15
-4:16
-5:17
-6:18
-6:19
-6:20
-6:21
-6:22
-6:23
-6:24
+Start x: 44
+Start y: 24
+Goal x: 34
+Goal y: 12
+24:44
+23:44
+22:43
+21:42
+20:41
+19:40
+18:39
+17:38
+16:37
+15:36
+14:35
+13:34
+12:34
 Path1
-Start x: 24
-Start y: 6
-Goal x: 18
-Goal y: 2
-6:24
-5:23
-4:22
-3:21
-2:20
-2:19
-2:18
-Path2
-Start x: 18
-Start y: 2
+Start x: 34
+Start y: 12
 Goal x: 14
-Goal y: 20
-2:18
-3:17
-4:17
-5:16
-6:16
-7:16
+Goal y: 8
+12:34
+11:33
+11:32
+11:31
+11:30
+10:29
+10:28
+10:27
+10:26
+10:25
+10:24
+10:23
+10:22
+9:21
+8:20
+8:19
+8:18
+8:17
 8:16
-9:16
-10:16
-11:16
-12:16
-13:15
-14:14
-15:14
-16:14
-17:14
-18:14
-19:14
-20:14
-Path3
+8:15
+8:14
+Path2
 Start x: 14
-Start y: 20
-Goal x: 14
-Goal y: 18
-20:14
-19:14
-18:14
-Last Path
-Start x: 14
-Start y: 18
-Goal x: 4
+Start y: 8
+Goal x: 34
 Goal y: 0
+8:14
+Path3
+Start x: 34
+Start y: 0
+Goal x: 28
+Goal y: 18
+0:34
+Last Path
+Start x: 28
+Start y: 18
+Goal x: 44
+Goal y: 24
+18:28
+19:29
+20:30
+21:31
+21:32
+21:33
+21:34
+21:35
+21:36
+21:37
+21:38
+22:39
+23:40
+24:41
+24:42
+24:43
+24:44
+Agent0
+Start x: 2
+Start y: 10
+First Goal x: 44
+First Goal y: 24
+18:28
+19:29
+20:30
+21:31
+21:32
+21:33
+21:34
+21:35
+21:36
+21:37
+21:38
+22:39
+23:40
+24:41
+24:42
+24:43
+24:44
+Agent1
+Start x: 40
+Start y: 4
+First Goal x: 34
+First Goal y: 12
+18:28
+19:29
+20:30
+21:31
+21:32
+21:33
+21:34
+21:35
+21:36
+21:37
+21:38
+22:39
+23:40
+24:41
+24:42
+24:43
+24:44
