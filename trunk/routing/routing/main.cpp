@@ -18,6 +18,7 @@ XSI-conformant systems. */
 #define WALLSTOREMOVE 40
 #define GOALS       4
 #define AGENTS      4
+//#define DISPLAY
 
 void printStartMaze(Map *map) {
 	for (int x = 0; x < MAZEWIDTH + 2; x++)
@@ -117,8 +118,6 @@ int main(){
 	for (int i = 0; i < MAZEWIDTH; i++)
 		for (int j = 0; j < MAZEHEIGHT; j++)
 			dyn_maze[i][j] = 1;
-	
-
 
 
 	list<Planner> goals;
@@ -155,10 +154,11 @@ int main(){
 	}
 
 	//print test start maze
-
+#ifdef DISPLAY
 	printStartMaze(map);
 
 	printDynMaze(dyn_maze, MAZEHEIGHT);
+#endif
 	
 	//generate random goals and random starts
 	std::srand(std::time(0));
@@ -210,20 +210,22 @@ int main(){
 		goals.push_back(p);
 		//gets the solution path
 		path = p.path();
+#ifdef DISPLAY
 		std::cout <<  "Path " << i << std::endl;		
 		std::cout << "Result " << result << std::endl;
 		std::cout << "Start x: " << tmpstartx << std::endl;
 		std::cout << "Start y: " << tmpstarty << std::endl;
 		std::cout << "Goal x: " << goalx << std::endl;
 		std::cout << "Goal y: " << goaly << std::endl;
-
+#endif
 		//dyn_maze[tmpstartx][tmpstarty] = 5;
 		//dyn_maze[goalx][goaly] = 4;
 
 		dyn_maze[tmpstarty][tmpstartx] = 5;
 		dyn_maze[goaly][goalx] = 4;	
+#ifdef DISPLAY
 		printDynMaze(dyn_maze, MAZEHEIGHT);
-
+#endif
 		int m = 0;
 		int m_amount = 0;
 		while (!path.empty()) {
@@ -237,18 +239,18 @@ int main(){
 			m++;
 			m_amount++;
 			path.pop_front();
+#ifdef DISPLAY
 			std::cout << r << ":" << c << std::endl;
-			
+#endif			
 		}
 
 		dyn_maze[tmpstarty][tmpstartx] = 5;
-		dyn_maze[goaly][goalx] = 4;
-
-		//printDynMaze(dyn_maze, MAZEHEIGHT);
-
+		dyn_maze[goaly][goalx] = 4;		
+#ifdef DISPLAY
 		std::cout << "mylist stores " << goals.size() << " paths.\n";
 
 		printDynMaze(dyn_maze, MAZEHEIGHT);
+#endif
 	}
 
 	Planner p(map, (*map) (oldgoalx, oldgoaly), (*map) (primestartx, primestarty));
@@ -257,11 +259,13 @@ int main(){
 	goals.push_back(p);
 	lastpath = p.path();
 
+#ifdef DISPLAY
 	std::cout << "Last Path" << std::endl;
 	std::cout << "Start x: " << oldgoalx << std::endl;
 	std::cout << "Start y: " << oldgoaly << std::endl;
 	std::cout << "Goal x: " << primestartx << std::endl;
 	std::cout << "Goal y: " << primestarty << std::endl;
+#endif
 
 	while (!lastpath.empty()) {
 		int r, c;
@@ -270,18 +274,20 @@ int main(){
 		dyn_maze[r][c] = 3;
 //		(*map)(r, c)->cost = 2;
 		lastpath.pop_front();
+#ifdef DISPLAY
 		std::cout << r << ":" << c << std::endl;
+#endif
 	}
 
 	dyn_maze[oldgoaly][oldgoalx] = 5;
 	dyn_maze[primestarty][primestartx] = 4;
-
+#ifdef DISPLAY
 	std::cout << "mylist stores " << goals.size() << " paths.\n";
 	std::cout << "Shortest Path between goals" << std::endl;
 
 	//print out shortest path between goals
 	printDynMaze(dyn_maze, MAZEHEIGHT);
-	
+#endif	
 	//create random agents and set their initial goal
 
 	for (int i = 0; i < AGENTS; i++) {
@@ -300,13 +306,13 @@ int main(){
 
 		dyn_agentx[i] = startx;
 		dyn_agenty[i] = starty;
-
+#ifdef DISPLAY
 		std::cout << "Agent" << i << std::endl;
 		std::cout << "Start x: " << dyn_agentx[i] << std::endl;
 		std::cout << "Start y: " << dyn_agenty[i] << std::endl;
 		std::cout << "First Goal x: " << dyn_goalx[i] << std::endl;
 		std::cout << "First Goal y: " << dyn_goaly[i] << std::endl;
-
+#endif
 		//ACTUALLY UNNECESSARY AS WE ALREADY HAVE STORED THE SHORTEST PATH IN GOALS LIST
 		//CAN BE USED FOR COLLISION AVOIDANCE
 		//SO WE NEED ONLY THE PATH TO FIRST GOAL PER AGENT
@@ -330,11 +336,15 @@ int main(){
 			c = agentpath.front()->y();
 			dyn_maze[r][c] = 7;
 			agentpath.pop_front();
+#ifdef DISPLAY
 			std::cout << r << ":" << c << std::endl;
+#endif
 		}
 
 		dyn_maze[dyn_agenty[i]][dyn_agentx[i]] = 6;
+#ifdef DISPLAY
 		printDynMaze(dyn_maze, MAZEHEIGHT);
+#endif
 		//dyn_maze[primestarty][primestartx] = 4;
 
 
