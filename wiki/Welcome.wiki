@@ -11,12 +11,18 @@
 
 = Details =
 
-Checked out:
-https://code.google.com/p/opennero/source/checkout
+/trunk
 
-I will hopefully work over x-mas on the code
+A maze with definable width, height, goals, agents and output is created.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+The shortest path between is found by Dstarlite Algorithm
+
+The shortest path to a starting goal is found for each agent
+
+A collsion avoidance is implemented by blocking the cell for the next moving agent
+
+A timer calculates the run-time
+
+Several outputs are defined to show the results but can be suppressed for performance tests
+
+Unfortunately I had to work alone so I could not implement all the features I had in mind. Nevertheless i have to admit that D* Lite algorithm is very fast and avoids huge memory usage.
