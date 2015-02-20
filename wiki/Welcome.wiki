@@ -25,4 +25,4 @@ A timer calculates the run-time
 
 Several outputs are defined to show the results but can be suppressed for performance tests
 
-Unfortunately I had to work alone so I could not implement all the features I had in mind. Nevertheless i have to admit that D* Lite algorithm is very fast and avoids huge memory usage.
+Unfortunately I had to work alone so I could not implement all the features I had in mind. Nevertheless i have to admit that Dstar Lite algorithm is very fast and avoids huge memory usage.
