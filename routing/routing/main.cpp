@@ -19,6 +19,8 @@ XSI-conformant systems. */
 #define GOALS       4
 #define AGENTS      4
 //#define DISPLAY
+#define COLLISION
+#define DEBUG
 
 void printStartMaze(Map *map) {
 	for (int x = 0; x < MAZEWIDTH + 2; x++)
@@ -65,6 +67,10 @@ void printDynMaze(int dyn_maze[][MAZEHEIGHT], int dim1){
 				std::cout << "A";
 			else if (dyn_maze[x][y] == 7)
 				std::cout << "a";
+			else if (dyn_maze[x][y] == 8)
+				std::cout << "b";
+			else if (dyn_maze[x][y] == 9)
+				std::cout << "m";
 			else
 				std::cout << " ";
 
@@ -85,7 +91,7 @@ void printDynMaze(int dyn_maze[][MAZEHEIGHT], int dim1){
 int main(){
 
 	int startx, starty, goalx, goaly, tmpstartx, tmpstarty, oldgoaly, oldgoalx, primestartx, primestarty;
-	int mapx, mapy, newx, newy;
+	int newx, newy;
 	int wallstoremove = WALLSTOREMOVE;
 
 	int agent_startx, agent_starty;
@@ -112,7 +118,14 @@ int main(){
 	clock_t zeit1, zeit2;
 
 	zeit1 = clock();
-	
+
+#ifdef COLLISION
+	int agent_path[AGENTS][MAZEWIDTH][MAZEHEIGHT];
+	for (int z = 0; z < AGENTS; z++)
+		for (int i = 0; i < MAZEWIDTH; i++)
+			for (int j = 0; j < MAZEHEIGHT; j++)
+				agent_path[z][i][j] = 1;
+#endif	
 
 	int dyn_maze[MAZEWIDTH][MAZEHEIGHT];
 	for (int i = 0; i < MAZEWIDTH; i++)
@@ -306,6 +319,8 @@ int main(){
 
 		dyn_agentx[i] = startx;
 		dyn_agenty[i] = starty;
+
+		
 #ifdef DISPLAY
 		std::cout << "Agent" << i << std::endl;
 		std::cout << "Start x: " << dyn_agentx[i] << std::endl;
@@ -335,6 +350,9 @@ int main(){
 			r = agentpath.front()->x();
 			c = agentpath.front()->y();
 			dyn_maze[r][c] = 7;
+#ifdef COLLISION
+			agent_path[i][r][c] = 9;
+#endif
 			agentpath.pop_front();
 #ifdef DISPLAY
 			std::cout << r << ":" << c << std::endl;
@@ -350,6 +368,60 @@ int main(){
 
 	}
 
+#ifdef COLLISION
+	for (int z = 0; z < AGENTS; z++)
+		for (int i = 0; i < MAZEWIDTH; i++)
+			for (int j = 0; j < MAZEHEIGHT; j++)
+				if (dyn_maze[i][j] == 3)
+					agent_path[z][i][j] = 9;
+
+
+	/*for (int z = 0; z < AGENTS; z++){
+		std::cout << "Agent " << z << " moves." << std::endl;
+		for (int i = 0; i < MAZEWIDTH; i++) {
+			for (int j = 0; j < MAZEHEIGHT; j++){
+				if (agent_path[z][i][j] == 9){
+					std::cout << i << ":" << j << std::endl;
+					
+				}
+			}
+		}
+
+	}*/
+
+	//test
+	
+		
+	for (int i = 0; i < MAZEWIDTH; i++) {
+		for (int j = 0; j < MAZEHEIGHT; j++) {
+			for (int z = 0; z < AGENTS; z++) {
+				if (agent_path[z][i][j] == 9) {
+					std::cout << "Agent " << z << " moves." << std::endl;
+					std::cout << i << ":" << j << std::endl;
+					dyn_maze[i][j] = 9;
+					if (z < AGENTS - 1){
+						agent_path[z + 1][i][j] = 8;
+						dyn_maze[i][j] = 8;
+						printDynMaze(dyn_maze, MAZEHEIGHT);
+
+					}
+				
+				}
+				else if (agent_path[z][i][j] == 8) {
+					std::cout << "Agent " << z << " waits." << std::endl;
+					agent_path[z][i][j] = 9;
+					dyn_maze[i][j] = 9;
+
+				}
+			
+			}
+
+		}
+
+	}
+		
+	printDynMaze(dyn_maze, MAZEHEIGHT);
+#endif
 	
 	zeit2 = clock();
 
