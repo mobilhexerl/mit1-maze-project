@@ -400,8 +400,10 @@ int main(){
 					std::cout << i << ":" << j << std::endl;
 					dyn_maze[i][j] = 9;
 					if (z < AGENTS - 1){
-						agent_path[z + 1][i][j] = 8;
-						dyn_maze[i][j] = 8;
+						if (agent_path[z + 1][i][j] == 9){
+							agent_path[z + 1][i][j] = 8;
+							dyn_maze[i][j] = 8;
+						}						
 						printDynMaze(dyn_maze, MAZEHEIGHT);
 
 					}
