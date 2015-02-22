@@ -19,7 +19,7 @@ XSI-conformant systems. */
 #define GOALS       4
 #define AGENTS      4
 #define DISPLAY
-//#define COLLISION
+#define COLLISION
 //#define DEBUG
 
 void printStartMaze(Map *map) {
@@ -94,6 +94,8 @@ int main(){
 	int newx, newy;
 	int wallstoreadd = WALLSTOREADD;
 
+	enum celltype  { EMPTY=1, WALL=2, PATH=3, GOAL=4, START=5, AGENT=6, AGENTPATH=7, BLOCK=8, MOVE=9 };
+
 	int agent_startx, agent_starty;
 
 	int *dyn_goalx = 0;
@@ -124,18 +126,18 @@ int main(){
 	for (int z = 0; z < AGENTS; z++)
 		for (int i = 0; i < MAZEWIDTH; i++)
 			for (int j = 0; j < MAZEHEIGHT; j++)
-				agent_path[z][i][j] = 1;
+				agent_path[z][i][j] = EMPTY;
 #endif	
 
 	int dyn_maze[MAZEWIDTH][MAZEHEIGHT];
 	for (int i = 0; i < MAZEWIDTH; i++)
 		for (int j = 0; j < MAZEHEIGHT; j++)
-			dyn_maze[i][j] = 1;
+			dyn_maze[i][j] = EMPTY;
 
 	int blocked_maze[MAZEWIDTH][MAZEHEIGHT];
 	for (int i = 0; i < MAZEWIDTH; i++)
 		for (int j = 0; j < MAZEHEIGHT; j++)
-			blocked_maze[i][j] = 1;
+			blocked_maze[i][j] = EMPTY;
 	
 	list<Planner> goals;
 	std::list<Planner>::iterator it;
@@ -146,27 +148,22 @@ int main(){
 
 	
 	Map *map = new Map(MAZEHEIGHT, MAZEWIDTH);
-	//(*map).
-	//more readable 
-	//map->operator()
+	
 	for (int i = 0; i < MAZEHEIGHT; ++i) {
 		for (int j = 0; j < MAZEWIDTH; ++j) {
-			(*map)(i, j)->cost = 1;
+			(*map)(i, j)->cost = EMPTY;
 		}
 	}
 
-	//print test - no other usage
-	//(*map)(10, 10)->cost = 2;
 	
-
-	//NEED MORE RANDOMIZED OBSTACLES INCREASE WALLSTOREADD
+	//FOR MORE RANDOMIZED OBSTACLES INCREASE WALLSTOREADD
 
 	while (wallstoreadd)
 	{
 		newx = rand() % MAZEWIDTH;
 		newy = rand() % MAZEHEIGHT;
 		(*map)(newy, newx)->cost = Map::Cell::COST_UNWALKABLE;
-		dyn_maze[newx][newy] = 2;
+		dyn_maze[newx][newy] = WALL;
 		--wallstoreadd;
 	}
 
@@ -208,8 +205,7 @@ int main(){
 			tmpstarty = oldgoaly;
 		}
 
-		//constructs map with initial start and initial goal
-		//Planner p(map, (*map) (tmpstartx, tmpstarty), (*map) (goaly, goalx));
+		//constructs map with initial start and initial goal		
 		Planner p(map, (*map) (tmpstarty, tmpstartx), (*map) (goaly, goalx));
 
 		//saves goal as next start
@@ -236,8 +232,8 @@ int main(){
 		std::cout << "Goal x: " << goalx << std::endl;
 		std::cout << "Goal y: " << goaly << std::endl;
 #endif
-		dyn_maze[tmpstartx][tmpstarty] = 5;
-		dyn_maze[goalx][goaly] = 4;
+		dyn_maze[tmpstartx][tmpstarty] = START;
+		dyn_maze[goalx][goaly] = GOAL;
 
 #ifdef DISPLAY
 		printDynMaze(dyn_maze, MAZEHEIGHT);
@@ -251,7 +247,7 @@ int main(){
 
 			dyn_pathx[m] = r;
 			dyn_pathy[m] = c;
-			dyn_maze[r][c] = 3;
+			dyn_maze[r][c] = PATH;
 			m++;
 			m_amount++;
 			path.pop_front();
@@ -259,8 +255,8 @@ int main(){
 			std::cout << r << ":" << c << std::endl;
 #endif			
 		}
-		dyn_maze[tmpstartx][tmpstarty] = 5;
-		dyn_maze[goalx][goaly] = 4;
+		dyn_maze[tmpstartx][tmpstarty] = START;
+		dyn_maze[goalx][goaly] = GOAL;
 	
 #ifdef DISPLAY
 		std::cout << "mylist stores " << goals.size() << " paths.\n";
@@ -287,15 +283,16 @@ int main(){
 		int r, c;
 		r = lastpath.front()->x();
 		c = lastpath.front()->y();
-		dyn_maze[r][c] = 3;
+		dyn_maze[r][c] = PATH;
 		lastpath.pop_front();
 #ifdef DISPLAY
 		std::cout << r << ":" << c << std::endl;
 #endif
 	}
 
-	dyn_maze[oldgoaly][oldgoalx] = 5;
-	dyn_maze[primestarty][primestartx] = 4;
+	dyn_maze[oldgoaly][oldgoalx] = START;
+	dyn_maze[primestarty][primestartx] = GOAL;
+
 #ifdef DISPLAY
 	std::cout << "mylist stores " << goals.size() << " paths.\n";
 	std::cout << "Shortest Path between goals" << std::endl;
@@ -321,7 +318,6 @@ int main(){
 
 		dyn_agentx[i] = startx;
 		dyn_agenty[i] = starty;
-
 		
 #ifdef DISPLAY
 		std::cout << "Agent" << i << std::endl;
@@ -330,8 +326,6 @@ int main(){
 		std::cout << "First Goal x: " << dyn_goalx[i] << std::endl;
 		std::cout << "First Goal y: " << dyn_goaly[i] << std::endl;
 #endif
-		
-
 		Planner p(map, (*map) (starty, startx), (*map) (dyn_goaly[i], dyn_goalx[i]));
 		p.replan();
 		agentpath = p.path();
@@ -340,18 +334,17 @@ int main(){
 			int r, c;
 			r = agentpath.front()->x();
 			c = agentpath.front()->y();
-			dyn_maze[r][c] = 7;
+			dyn_maze[r][c] = AGENTPATH;
+
 #ifdef COLLISION
-			agent_path[i][r][c] = 9;
+			agent_path[i][r][c] = MOVE;
 #endif
 			agentpath.pop_front();
 #ifdef DISPLAY
 			std::cout << r << ":" << c << std::endl;
 #endif
-		}
-
-		
-		dyn_maze[dyn_agentx[i]][dyn_agenty[i]] = 6;
+		}		
+		dyn_maze[dyn_agentx[i]][dyn_agenty[i]] = AGENT;
 #ifdef DISPLAY
 		printDynMaze(dyn_maze, MAZEHEIGHT);
 #endif
@@ -362,15 +355,15 @@ int main(){
 	for (int z = 0; z < AGENTS; z++)
 		for (int i = 0; i < MAZEWIDTH; i++)
 			for (int j = 0; j < MAZEHEIGHT; j++)
-				if (dyn_maze[i][j] == 3)
-					agent_path[z][i][j] = 9;
+				if (dyn_maze[i][j] == PATH)
+					agent_path[z][i][j] = MOVE;
 
 #ifdef DEBUG
 	for (int z = 0; z < AGENTS; z++){
 		std::cout << "Agent " << z << " moves." << std::endl;
 		for (int i = 0; i < MAZEWIDTH; i++) {
 			for (int j = 0; j < MAZEHEIGHT; j++){
-				if (agent_path[z][i][j] == 9){
+				if (agent_path[z][i][j] == MOVE){
 					std::cout << i << ":" << j << std::endl;
 					
 				}
@@ -385,17 +378,17 @@ int main(){
 	for (int i = 0; i < MAZEWIDTH; i++) {
 		for (int j = 0; j < MAZEHEIGHT; j++) {
 			for (int z = 0; z < AGENTS; z++) {
-				if (agent_path[z][i][j] == 9 && blocked_maze[i][j] != 1) {
+				if (agent_path[z][i][j] == MOVE && blocked_maze[i][j] == EMPTY) {
 					std::cout << "Agent " << z << " moves." << std::endl;
 					std::cout << i << ":" << j << std::endl;
-					dyn_maze[i][j] = 9;
+					dyn_maze[i][j] = MOVE;
 					blocked_maze[i][j] = z;
 
-					if (j > 0 && blocked_maze[i][j - 1] == z && agent_path[z][i][j] == 9){
-						blocked_maze[i][j] = 1;
+					if (j > 0 && blocked_maze[i][j - 1] == z && agent_path[z][i][j] == MOVE){
+						blocked_maze[i][j-1] = EMPTY;
 					}								
 				}
-				else if (agent_path[z][i][j] == 8) {
+				else if (agent_path[z][i][j] == BLOCK) {
 					std::cout << "Agent " << z << " waits." << std::endl;
 					
 				}
