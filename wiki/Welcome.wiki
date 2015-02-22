@@ -15,7 +15,7 @@
 
 A maze with definable width, height, goals, agents and output is created.
 
-The shortest path between is found by Dstarlite Algorithm
+The shortest path between the goals is found by Dstarlite Algorithm
 
 The shortest path to a starting goal is found for each agent
 
