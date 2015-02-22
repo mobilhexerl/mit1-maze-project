@@ -20,7 +20,7 @@ XSI-conformant systems. */
 #define AGENTS      4
 //#define DISPLAY
 #define COLLISION
-#define DEBUG
+//#define DEBUG
 
 void printStartMaze(Map *map) {
 	for (int x = 0; x < MAZEWIDTH + 2; x++)
@@ -132,7 +132,12 @@ int main(){
 		for (int j = 0; j < MAZEHEIGHT; j++)
 			dyn_maze[i][j] = 1;
 
+	int blocked_maze[MAZEWIDTH][MAZEHEIGHT];
+	for (int i = 0; i < MAZEWIDTH; i++)
+		for (int j = 0; j < MAZEHEIGHT; j++)
+			blocked_maze[i][j] = 1;
 
+	//FOR THE SAKE OF GROUP-MEMBERS NO FURTHER LISTS ARE USED
 	list<Planner> goals;
 	std::list<Planner>::iterator it;
 	list<Map::Cell *> path;	
@@ -150,12 +155,11 @@ int main(){
 		}
 	}
 
-	//print test
+	//print test - no ther usage
 	(*map)(10, 10)->cost = 2;
-
 	
 
-	//NEEDED MORE RANDOMIZED OBSTACLES
+	//NEED MORE RANDOMIZED OBSTACLES INCREASE WALLSTOREREMOVE
 
 	while (wallstoremove)
 	{
@@ -329,7 +333,7 @@ int main(){
 		std::cout << "First Goal y: " << dyn_goaly[i] << std::endl;
 #endif
 		//ACTUALLY UNNECESSARY AS WE ALREADY HAVE STORED THE SHORTEST PATH IN GOALS LIST
-		//CAN BE USED FOR COLLISION AVOIDANCE
+		//CAN BE USED FOR DYNAMIC COLLISION AVOIDANCE
 		//SO WE NEED ONLY THE PATH TO FIRST GOAL PER AGENT
 
 		/*for (int j = 0; j < GOALS; j++) {
@@ -363,9 +367,7 @@ int main(){
 #ifdef DISPLAY
 		printDynMaze(dyn_maze, MAZEHEIGHT);
 #endif
-		//dyn_maze[primestarty][primestartx] = 4;
-
-
+	
 	}
 
 #ifdef COLLISION
@@ -375,8 +377,8 @@ int main(){
 				if (dyn_maze[i][j] == 3)
 					agent_path[z][i][j] = 9;
 
-
-	/*for (int z = 0; z < AGENTS; z++){
+#ifdef DEBUG
+	for (int z = 0; z < AGENTS; z++){
 		std::cout << "Agent " << z << " moves." << std::endl;
 		for (int i = 0; i < MAZEWIDTH; i++) {
 			for (int j = 0; j < MAZEHEIGHT; j++){
@@ -387,33 +389,27 @@ int main(){
 			}
 		}
 
-	}*/
-
-	//test
+	}
+#endif
+	
 	
 		
 	for (int i = 0; i < MAZEWIDTH; i++) {
 		for (int j = 0; j < MAZEHEIGHT; j++) {
 			for (int z = 0; z < AGENTS; z++) {
-				if (agent_path[z][i][j] == 9) {
+				if (agent_path[z][i][j] == 9 && blocked_maze[i][j] != 1) {
 					std::cout << "Agent " << z << " moves." << std::endl;
 					std::cout << i << ":" << j << std::endl;
 					dyn_maze[i][j] = 9;
-					if (z < AGENTS - 1){
-						if (agent_path[z + 1][i][j] == 9){
-							agent_path[z + 1][i][j] = 8;
-							dyn_maze[i][j] = 8;
-						}						
-						printDynMaze(dyn_maze, MAZEHEIGHT);
+					blocked_maze[i][j] = z;
 
-					}
-				
+					if (j > 0 && blocked_maze[i][j - 1] == z && agent_path[z][i][j] == 9){
+						blocked_maze[i][j] = 1;
+					}								
 				}
 				else if (agent_path[z][i][j] == 8) {
 					std::cout << "Agent " << z << " waits." << std::endl;
-					agent_path[z][i][j] = 9;
-					dyn_maze[i][j] = 9;
-
+					
 				}
 			
 			}
@@ -428,13 +424,8 @@ int main(){
 	zeit2 = clock();
 
 	cout << "Vergangene Zeit in Millisekunden: " << (zeit2 - zeit1) << "\n";
-	
 
-	//Planner p(map, (*map) (1, 1), (*map) (10, 15));	
-	//p.replan();	
-	//list<Map::Cell *> path = p.path();	
-
-	
+	//remembrance to Mr Heinzel removed
 
 	return 0;
 }
