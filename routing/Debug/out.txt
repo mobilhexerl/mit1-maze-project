@@ -58,9 +58,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Path 0
 Result 1
-Start x: 40
-Start y: 18
-Goal x: 28
+Start x: 0
+Start y: 22
+Goal x: 30
 Goal y: 14
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 X                    X             X               X
@@ -77,33 +77,51 @@ X                X                                 X
 X   X                       X             X        X
 X                   X                              X
 X                     X                            X
-X            X          X    G                     X
+X            X          X      G                   X
 X                                                  X
 X           X         X X                          X
 X                                        XX   X    X
-X   X                                    S         X
+X   X                                              X
 X                                   X           X  X
 X     X            X                               X
 X                                                  X
-X                                                  X
+XS                                                 X
 X              X                            X      X
 X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-40:18
-39:17
-38:17
-37:17
-36:17
-35:17
-34:17
-33:16
-32:15
-31:14
-30:14
-29:14
+0:22
+1:21
+2:20
+3:19
+4:18
+5:17
+6:17
+7:17
+8:17
+9:17
+10:17
+11:17
+12:17
+13:17
+14:17
+15:17
+16:17
+17:17
+18:17
+19:17
+20:17
+21:17
+22:17
+23:17
+24:17
+25:16
+26:15
+27:14
 28:14
+29:14
+30:14
 mylist stores 1 paths.
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 X                    X             X               X
@@ -120,15 +138,15 @@ X                X                                 X
 X   X                       X             X        X
 X                   X                              X
 X                     X                            X
-X            X          X    Gooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                                    S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
+X            X          X   oooG                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
 X              X                            X      X
 X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -136,12 +154,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Path 1
 Result 1
-Start x: 28
+Start x: 30
 Start y: 14
-Goal x: 38
-Goal y: 8
+Goal x: 32
+Goal y: 0
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
+X                    X           G X               X
 X      X                                        X  X
 X                               X                  X
 X  X                          X                    X
@@ -149,62 +167,66 @@ X                                        XX        X
 X                                              X   X
 X                                      X           X
 X            X                             X       X
-X                      X     X         G           X
+X                      X     X                     X
 X                                     X            X
 X                X                                 X
 X   X                       X             X        X
 X                   X                              X
 X                     X                            X
-X            X          X    Sooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                                    S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
 X              X                            X      X
 X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-28:14
-29:13
+30:14
+30:13
 30:12
-31:11
-32:11
-33:10
-34:9
-35:8
-36:8
-37:8
-38:8
+30:11
+30:10
+30:9
+30:8
+30:7
+30:6
+30:5
+30:4
+30:3
+30:2
+31:1
+32:0
 mylist stores 2 paths.
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X                                        X  X
-X                               X                  X
-X  X                          X                    X
-X                                        XX        X
-X                                              X   X
-X                                      X           X
-X            X                             X       X
-X                      X     X      oooG           X
-X                                  o  X            X
-X                X                o                X
-X   X                       X   oo        X        X
+X                    X           G X               X
+X      X                        o               X  X
+X                              oX                  X
+X  X                          Xo                   X
+X                              o         XX        X
+X                              o               X   X
+X                              o       X           X
+X            X                 o           X       X
+X                      X     X o                   X
+X                              o      X            X
+X                X             o                   X
+X   X                       X  o          X        X
 X                   X          o                   X
-X                     X       o                    X
-X            X          X    Sooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                                    S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
+X                     X        o                   X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
 X              X                            X      X
 X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -212,410 +234,40 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Path 2
 Result 1
-Start x: 38
-Start y: 8
-Goal x: 16
+Start x: 32
+Start y: 0
+Goal x: 12
 Goal y: 2
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X                                        X  X
-X                G              X                  X
-X  X                          X                    X
-X                                        XX        X
-X                                              X   X
-X                                      X           X
-X            X                             X       X
-X                      X     X      oooS           X
-X                                  o  X            X
-X                X                o                X
-X   X                       X   oo        X        X
+X                    X           S X               X
+X      X                        o               X  X
+X            G                 oX                  X
+X  X                          Xo                   X
+X                              o         XX        X
+X                              o               X   X
+X                              o       X           X
+X            X                 o           X       X
+X                      X     X o                   X
+X                              o      X            X
+X                X             o                   X
+X   X                       X  o          X        X
 X                   X          o                   X
-X                     X       o                    X
-X            X          X    Sooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                                    S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
+X                     X        o                   X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
 X              X                            X      X
 X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-38:8
-37:7
-36:6
-35:5
-34:5
-33:5
-32:5
-31:4
-30:4
-29:4
-28:4
-27:4
-26:4
-25:4
-24:4
-23:3
-22:2
-21:2
-20:2
-19:2
-18:2
-17:2
-16:2
-mylist stores 3 paths.
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X                                        X  X
-X                Goooooo        X                  X
-X  X                    o     X                    X
-X                        oooooooo        XX        X
-X                                oooo          X   X
-X                                    o X           X
-X            X                        o    X       X
-X                      X     X      oooS           X
-X                                  o  X            X
-X                X                o                X
-X   X                       X   oo        X        X
-X                   X          o                   X
-X                     X       o                    X
-X            X          X    Sooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                                    S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
-X              X                            X      X
-X                 X X                              X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Path 3
-Result 1
-Start x: 16
-Start y: 2
-Goal x: 26
-Goal y: 18
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X                                        X  X
-X                Soooooo        X                  X
-X  X                    o     X                    X
-X                        oooooooo        XX        X
-X                                oooo          X   X
-X                                    o X           X
-X            X                        o    X       X
-X                      X     X      oooS           X
-X                                  o  X            X
-X                X                o                X
-X   X                       X   oo        X        X
-X                   X          o                   X
-X                     X       o                    X
-X            X          X    Sooo                  X
-X                                o                 X
-X           X         X X         o                X
-X                                  ooooooXX   X    X
-X   X                      G             S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
-X              X                            X      X
-X                 X X                              X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-16:2
-17:3
-18:4
-19:5
-20:6
-21:7
-21:8
-22:9
-23:10
-23:11
-23:12
-24:13
-25:14
-26:15
-26:16
-26:17
-26:18
-mylist stores 4 paths.
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X                                        X  X
-X                Soooooo        X                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X      oooS           X
-X                      o           o  X            X
-X                X      o         o                X
-X   X                   o   X   oo        X        X
-X                   X   o      o                   X
-X                     X  o    o                    X
-X            X          X o  Sooo                  X
-X                          o     o                 X
-X           X         X X  o      o                X
-X                          o       ooooooXX   X    X
-X   X                      G             S         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
-X              X                            X      X
-X                 X X                              X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Last Path
-Start x: 26
-Start y: 18
-Goal x: 40
-Goal y: 18
-26:18
-27:18
-28:18
-29:18
-30:18
-31:18
-32:18
-33:18
-34:18
-35:18
-36:18
-37:18
-38:18
-39:18
-40:18
-mylist stores 5 paths.
-Shortest Path between goals
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X            S                           X  X
-X                Soooooo        X                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X      oooS           X
-X                      o           o  X            X
-X                X      o         o                X
-X   X                   o   X   oo        X        X
-X                   X   o      o                   X
-X                     X  o    o                    X
-X            X          X o  Sooo                  X
-X                   G      o     o                 X
-X           X         X X  o      o                X
-X                          o       ooooooXX   X    X
-X   X                      ooooooooooooooo         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
-X              X                            X      X
-X                 X X                              X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Agent0
-Start x: 14
-Start y: 12
-First Goal x: 40
-First Goal y: 18
-14:12
-15:12
-16:12
-17:12
-18:12
-19:13
-20:13
-21:14
-22:14
-23:15
-24:15
-25:15
-26:15
-27:15
-28:15
-29:15
-30:15
-31:15
-32:15
-33:15
-34:15
-35:15
-36:15
-37:16
-38:17
-39:17
-40:18
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X            S                           X  X
-X                Soooooo        X                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X      oooS           X
-X                      o           o  X            X
-X                X      o         o                X
-X   X                   o   X   oo        X        X
-X              AaaaaX   o      o                   X
-X                   aaX  o    o                    X
-X            X        aaX o  Sooo                  X
-X                   G   aaaaaaaaaaaaaa             X
-X           X         X X  o      o   a            X
-X                          o       ooooaaXX   X    X
-X   X                      ooooooooooooooa         X
-X                                   X           X  X
-X     X            X                               X
-X                                                  X
-X                                                  X
-X              X                            X      X
-X                 X X                              X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Agent1
-Start x: 32
-Start y: 24
-First Goal x: 28
-First Goal y: 14
-32:24
-31:23
-31:22
-31:21
-31:20
-30:19
-29:18
-28:17
-28:16
-28:15
-28:14
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X            S                           X  X
-X                Soooooo        X                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X      oooS           X
-X                      o           o  X            X
-X                X      o         o                X
-X   X                   o   X   oo        X        X
-X              AaaaaX   o      o                   X
-X                   aaX  o    o                    X
-X            X        aaX o  aooo                  X
-X                   G   aaaaaaaaaaaaaa             X
-X           X         X X  o a    o   a            X
-X                          o a     ooooaaXX   X    X
-X   X                      oooaooooooooooa         X
-X                              a    X           X  X
-X     X            X            a                  X
-X                               a                  X
-X                               a                  X
-X              X                a           X      X
-X                 X X            A                 X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Agent2
-Start x: 6
-Start y: 20
-First Goal x: 38
-First Goal y: 8
-6:20
-7:19
-8:19
-9:19
-10:18
-11:17
-12:16
-13:15
-14:14
-15:13
-16:12
-17:11
-18:11
-19:11
-20:11
-21:11
-22:11
-23:10
-24:10
-25:10
-26:10
-27:10
-28:10
-29:10
-30:10
-31:9
-32:8
-33:8
-34:8
-35:8
-36:8
-37:8
-38:8
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X               X
-X      X            S                           X  X
-X                Soooooo        X                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X   aaaaaaa           X
-X                      o        a  o  X            X
-X                X      aaaaaaaa  o                X
-X   X             aaaaaao   X   oo        X        X
-X              AaaaaX   o      o                   X
-X               a   aaX  o    o                    X
-X            X a      aaX o  aooo                  X
-X             a     G   aaaaaaaaaaaaaa             X
-X           Xa        X X  o a    o   a            X
-X           a              o a     ooooaaXX   X    X
-X   X      a               oooaooooooooooa         X
-X       aaa                    a    X           X  X
-X     XA           X            a                  X
-X                               a                  X
-X                               a                  X
-X              X                a           X      X
-X                 X X            A                 X
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Agent3
-Start x: 38
-Start y: 0
-First Goal x: 16
-First Goal y: 2
-38:0
-37:1
-36:1
-35:1
-34:1
-33:1
-32:1
+32:0
 31:1
 30:2
 29:2
@@ -632,33 +284,780 @@ First Goal y: 2
 18:2
 17:2
 16:2
+15:2
+14:2
+13:2
+12:2
+mylist stores 3 paths.
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X                    X             X   A           X
-X      X            S           aaaaaaa         X  X
-X                aaaaaaaaaaaaaaaX                  X
-X  X              o     o     X                    X
-X                  o     oooooooo        XX        X
-X                   o            oooo          X   X
-X                    o               o X           X
-X            X        o               o    X       X
-X                     oX     X   aaaaaaa           X
-X                      o        a  o  X            X
-X                X      aaaaaaaa  o                X
-X   X             aaaaaao   X   oo        X        X
-X              AaaaaX   o      o                   X
-X               a   aaX  o    o                    X
-X            X a      aaX o  aooo                  X
-X             a     G   aaaaaaaaaaaaaa             X
-X           Xa        X X  o a    o   a            X
-X           a              o a     ooooaaXX   X    X
-X   X      a               oooaooooooooooa         X
-X       aaa                    a    X           X  X
-X     XA           X            a                  X
-X                               a                  X
-X                               a                  X
-X              X                a           X      X
-X                 X X            A                 X
+X                    X           S X               X
+X      X                        o               X  X
+X            GooooooooooooooooooX                  X
+X  X                          Xo                   X
+X                              o         XX        X
+X                              o               X   X
+X                              o       X           X
+X            X                 o           X       X
+X                      X     X o                   X
+X                              o      X            X
+X                X             o                   X
+X   X                       X  o          X        X
+X                   X          o                   X
+X                     X        o                   X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
+X              X                            X      X
+X                 X X                              X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-Vergangene Zeit in Millisekunden: 328
+Path 3
+Result 1
+Start x: 12
+Start y: 2
+Goal x: 14
+Goal y: 4
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X           S X               X
+X      X                        o               X  X
+X            SooooooooooooooooooX                  X
+X  X                          Xo                   X
+X              G               o         XX        X
+X                              o               X   X
+X                              o       X           X
+X            X                 o           X       X
+X                      X     X o                   X
+X                              o      X            X
+X                X             o                   X
+X   X                       X  o          X        X
+X                   X          o                   X
+X                     X        o                   X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+12:2
+13:3
+14:4
+mylist stores 4 paths.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X           S X               X
+X      X                        o               X  X
+X            SooooooooooooooooooX                  X
+X  X          o               Xo                   X
+X              G               o         XX        X
+X                              o               X   X
+X                              o       X           X
+X            X                 o           X       X
+X                      X     X o                   X
+X                              o      X            X
+X                X             o                   X
+X   X                       X  o          X        X
+X                   X          o                   X
+X                     X        o                   X
+X            X          X   oooS                   X
+X                          o                       X
+X           X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+XS                                                 X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Last Path
+Start x: 14
+Start y: 4
+Goal x: 0
+Goal y: 22
+14:4
+14:5
+14:6
+14:7
+14:8
+13:9
+12:10
+11:11
+10:12
+9:13
+8:14
+7:15
+6:16
+5:17
+4:18
+3:19
+2:20
+1:21
+0:22
+mylist stores 5 paths.
+Shortest Path between goals
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G         S X               X
+X      X                        o               X  X
+X            SooooooooooooooooooX                  X
+X  X          o               Xo                   X
+X              o               o         XX        X
+X              o               o               X   X
+X              o               o       X           X
+X            X o               o           X       X
+X              o       X     X o                   X
+X             o                o      X            X
+X            o   X             o                   X
+X   X       o               X  o          X        X
+X          o        X          o                   X
+X         o           X        o                   X
+X    S   o   X          X   oooS                   X
+X       o                  o                       X
+X      o    X         X X o                        X
+X     oooooooooooooooooooo               XX   X    X
+X   Xo                                             X
+X   o                               X           X  X
+X  o  X            X                               X
+X o                                                X
+Xo                                                 X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Agent0
+Start x: 48
+Start y: 0
+First Goal x: 0
+First Goal y: 22
+48:0
+47:0
+46:1
+45:2
+44:3
+43:4
+42:5
+41:6
+40:7
+39:8
+38:9
+37:10
+36:11
+35:11
+34:12
+33:13
+32:14
+31:15
+30:16
+29:17
+28:18
+27:19
+26:19
+25:19
+24:19
+23:19
+22:19
+21:19
+20:19
+19:19
+18:19
+17:19
+16:19
+15:20
+14:20
+13:20
+12:20
+11:20
+10:20
+9:20
+8:20
+7:21
+6:22
+5:22
+4:22
+3:22
+2:22
+1:22
+0:22
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G         S X            aA X
+X      X                        o              aX  X
+X            SooooooooooooooooooX             a    X
+X  X          o               Xo             a     X
+X              o               o         XX a      X
+X              o               o           a   X   X
+X              o               o       X  a        X
+X            X o               o         a X       X
+X              o       X     X o        a          X
+X             o                o      Xa           X
+X            o   X             o      a            X
+X   X       o               X  o    aa    X        X
+X          o        X          o   a               X
+X         o           X        o  a                X
+X    S   o   X          X   oooS a                 X
+X       o                  o    a                  X
+X      o    X         X X o    a                   X
+X     oooooooooooooooooooo    a          XX   X    X
+X   Xo                       a                     X
+X   o            aaaaaaaaaaaa       X           X  X
+X  o  X  aaaaaaaa  X                               X
+X o     a                                          X
+Xaaaaaaa                                           X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Agent1
+Start x: 2
+Start y: 14
+First Goal x: 30
+First Goal y: 14
+2:14
+3:14
+4:14
+5:14
+6:14
+7:14
+8:14
+9:14
+10:14
+11:14
+12:15
+13:15
+14:15
+15:15
+16:15
+17:15
+18:15
+19:15
+20:15
+21:15
+22:15
+23:15
+24:14
+25:14
+26:14
+27:14
+28:14
+29:14
+30:14
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G         S X            aA X
+X      X                        o              aX  X
+X            SooooooooooooooooooX             a    X
+X  X          o               Xo             a     X
+X              o               o         XX a      X
+X              o               o           a   X   X
+X              o               o       X  a        X
+X            X o               o         a X       X
+X              o       X     X o        a          X
+X             o                o      Xa           X
+X            o   X             o      a            X
+X   X       o               X  o    aa    X        X
+X          o        X          o   a               X
+X         o           X        o  a                X
+X  AaaaaaaaaaX          Xaaaaaaa a                 X
+X       o    aaaaaaaaaaaa  o    a                  X
+X      o    X         X X o    a                   X
+X     oooooooooooooooooooo    a          XX   X    X
+X   Xo                       a                     X
+X   o            aaaaaaaaaaaa       X           X  X
+X  o  X  aaaaaaaa  X                               X
+X o     a                                          X
+Xaaaaaaa                                           X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Agent2
+Start x: 18
+Start y: 10
+First Goal x: 32
+First Goal y: 0
+18:10
+19:9
+20:8
+21:7
+22:6
+23:5
+24:4
+25:3
+26:3
+27:2
+28:1
+29:0
+30:0
+31:0
+32:0
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G      aaaa X            aA X
+X      X                     a  o              aX  X
+X            SooooooooooooooaoooX             a    X
+X  X          o           aa  Xo             a     X
+X              o         a     o         XX a      X
+X              o        a      o           a   X   X
+X              o       a       o       X  a        X
+X            X o      a        o         a X       X
+X              o     a X     X o        a          X
+X             o     a          o      Xa           X
+X            o   X A           o      a            X
+X   X       o               X  o    aa    X        X
+X          o        X          o   a               X
+X         o           X        o  a                X
+X  AaaaaaaaaaX          Xaaaaaaa a                 X
+X       o    aaaaaaaaaaaa  o    a                  X
+X      o    X         X X o    a                   X
+X     oooooooooooooooooooo    a          XX   X    X
+X   Xo                       a                     X
+X   o            aaaaaaaaaaaa       X           X  X
+X  o  X  aaaaaaaa  X                               X
+X o     a                                          X
+Xaaaaaaa                                           X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Agent3
+Start x: 0
+Start y: 8
+First Goal x: 12
+First Goal y: 2
+0:8
+1:7
+2:6
+3:5
+4:5
+5:5
+6:5
+7:4
+8:3
+9:2
+10:2
+11:2
+12:2
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G      aaaa X            aA X
+X      X                     a  o              aX  X
+X         aaaaooooooooooooooaoooX             a    X
+X  X     a    o           aa  Xo             a     X
+X       a      o         a     o         XX a      X
+X   aaaa       o        a      o           a   X   X
+X  a           o       a       o       X  a        X
+X a          X o      a        o         a X       X
+XA             o     a X     X o        a          X
+X             o     a          o      Xa           X
+X            o   X A           o      a            X
+X   X       o               X  o    aa    X        X
+X          o        X          o   a               X
+X         o           X        o  a                X
+X  AaaaaaaaaaX          Xaaaaaaa a                 X
+X       o    aaaaaaaaaaaa  o    a                  X
+X      o    X         X X o    a                   X
+X     oooooooooooooooooooo    a          XX   X    X
+X   Xo                       a                     X
+X   o            aaaaaaaaaaaa       X           X  X
+X  o  X  aaaaaaaa  X                               X
+X o     a                                          X
+Xaaaaaaa                                           X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Agent 3 moves.
+0:8
+Agent 0 moves.
+0:22
+Agent 3 moves.
+1:7
+Agent 0 moves.
+1:21
+Agent 0 moves.
+1:22
+Agent 3 moves.
+2:6
+Agent 1 moves.
+2:14
+Agent 0 moves.
+2:20
+Agent 0 moves.
+2:22
+Agent 3 moves.
+3:5
+Agent 1 moves.
+3:14
+Agent 0 moves.
+3:19
+Agent 0 moves.
+3:22
+Agent 3 moves.
+4:5
+Agent 1 moves.
+4:14
+Agent 0 moves.
+4:18
+Agent 0 moves.
+4:22
+Agent 3 moves.
+5:5
+Agent 1 moves.
+5:14
+Agent 0 moves.
+5:17
+Agent 0 moves.
+5:22
+Agent 3 moves.
+6:5
+Agent 1 moves.
+6:14
+Agent 0 moves.
+6:16
+Agent 0 moves.
+6:17
+Agent 0 moves.
+6:22
+Agent 3 moves.
+7:4
+Agent 1 moves.
+7:14
+Agent 0 moves.
+7:15
+Agent 0 moves.
+7:17
+Agent 0 moves.
+7:21
+Agent 3 moves.
+8:3
+Agent 1 moves.
+8:14
+Agent 0 moves.
+8:17
+Agent 0 moves.
+8:20
+Agent 3 moves.
+9:2
+Agent 0 moves.
+9:13
+Agent 1 moves.
+9:14
+Agent 0 moves.
+9:17
+Agent 0 moves.
+9:20
+Agent 3 moves.
+10:2
+Agent 0 moves.
+10:12
+Agent 1 moves.
+10:14
+Agent 0 moves.
+10:17
+Agent 0 moves.
+10:20
+Agent 3 moves.
+11:2
+Agent 0 moves.
+11:11
+Agent 1 moves.
+11:14
+Agent 0 moves.
+11:17
+Agent 0 moves.
+11:20
+Agent 3 moves.
+12:2
+Agent 0 moves.
+12:10
+Agent 1 moves.
+12:15
+Agent 0 moves.
+12:17
+Agent 0 moves.
+12:20
+Agent 0 moves.
+13:2
+Agent 0 moves.
+13:3
+Agent 0 moves.
+13:9
+Agent 1 moves.
+13:15
+Agent 0 moves.
+13:17
+Agent 0 moves.
+13:20
+Agent 0 moves.
+14:2
+Agent 0 moves.
+14:4
+Agent 0 moves.
+14:5
+Agent 0 moves.
+14:6
+Agent 0 moves.
+14:7
+Agent 0 moves.
+14:8
+Agent 1 moves.
+14:15
+Agent 0 moves.
+14:17
+Agent 0 moves.
+14:20
+Agent 0 moves.
+15:2
+Agent 1 moves.
+15:15
+Agent 0 moves.
+15:17
+Agent 0 moves.
+15:20
+Agent 0 moves.
+16:2
+Agent 1 moves.
+16:15
+Agent 0 moves.
+16:17
+Agent 0 moves.
+16:19
+Agent 0 moves.
+17:2
+Agent 1 moves.
+17:15
+Agent 0 moves.
+17:17
+Agent 0 moves.
+17:19
+Agent 0 moves.
+18:2
+Agent 2 moves.
+18:10
+Agent 1 moves.
+18:15
+Agent 0 moves.
+18:17
+Agent 0 moves.
+18:19
+Agent 0 moves.
+19:2
+Agent 2 moves.
+19:9
+Agent 1 moves.
+19:15
+Agent 0 moves.
+19:17
+Agent 0 moves.
+19:19
+Agent 0 moves.
+20:2
+Agent 2 moves.
+20:8
+Agent 1 moves.
+20:15
+Agent 0 moves.
+20:17
+Agent 0 moves.
+20:19
+Agent 0 moves.
+21:2
+Agent 2 moves.
+21:7
+Agent 1 moves.
+21:15
+Agent 0 moves.
+21:17
+Agent 0 moves.
+21:19
+Agent 0 moves.
+22:2
+Agent 2 moves.
+22:6
+Agent 1 moves.
+22:15
+Agent 0 moves.
+22:17
+Agent 0 moves.
+22:19
+Agent 0 moves.
+23:2
+Agent 2 moves.
+23:5
+Agent 1 moves.
+23:15
+Agent 0 moves.
+23:17
+Agent 0 moves.
+23:19
+Agent 0 moves.
+24:2
+Agent 2 moves.
+24:4
+Agent 1 moves.
+24:14
+Agent 0 moves.
+24:17
+Agent 0 moves.
+24:19
+Agent 0 moves.
+25:2
+Agent 2 moves.
+25:3
+Agent 1 moves.
+25:14
+Agent 0 moves.
+25:16
+Agent 0 moves.
+25:19
+Agent 0 moves.
+26:2
+Agent 2 moves.
+26:3
+Agent 1 moves.
+26:14
+Agent 0 moves.
+26:15
+Agent 0 moves.
+26:19
+Agent 2 moves.
+27:2
+Agent 1 moves.
+27:14
+Agent 0 moves.
+27:19
+Agent 2 moves.
+28:1
+Agent 0 moves.
+28:2
+Agent 1 moves.
+28:14
+Agent 0 moves.
+28:18
+Agent 2 moves.
+29:0
+Agent 0 moves.
+29:2
+Agent 1 moves.
+29:14
+Agent 0 moves.
+29:17
+Agent 2 moves.
+30:0
+Agent 0 moves.
+30:2
+Agent 0 moves.
+30:3
+Agent 0 moves.
+30:4
+Agent 0 moves.
+30:5
+Agent 0 moves.
+30:6
+Agent 0 moves.
+30:7
+Agent 0 moves.
+30:8
+Agent 0 moves.
+30:9
+Agent 0 moves.
+30:10
+Agent 0 moves.
+30:11
+Agent 0 moves.
+30:12
+Agent 0 moves.
+30:13
+Agent 1 moves.
+30:14
+Agent 0 moves.
+30:16
+Agent 2 moves.
+31:0
+Agent 0 moves.
+31:1
+Agent 0 moves.
+31:15
+Agent 2 moves.
+32:0
+Agent 0 moves.
+32:14
+Agent 0 moves.
+33:13
+Agent 0 moves.
+34:12
+Agent 0 moves.
+35:11
+Agent 0 moves.
+36:11
+Agent 0 moves.
+37:10
+Agent 0 moves.
+38:9
+Agent 0 moves.
+39:8
+Agent 0 moves.
+40:7
+Agent 0 moves.
+41:6
+Agent 0 moves.
+42:5
+Agent 0 moves.
+43:4
+Agent 0 moves.
+44:3
+Agent 0 moves.
+45:2
+Agent 0 moves.
+46:1
+Agent 0 moves.
+47:0
+Agent 0 moves.
+48:0
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                    X G      mmmm X            mm X
+X      X                     m  m              mX  X
+X         mmmmmmmmmmmmmmmmmmmmmmX             m    X
+X  X     m    m           mm  Xm             m     X
+X       m      m         m     m         XX m      X
+X   mmmm       m        m      m           m   X   X
+X  m           m       m       m       X  m        X
+X m          X m      m        m         m X       X
+Xm             m     m X     X m        m          X
+X             m     m          m      Xm           X
+X            m   X m           m      m            X
+X   X       m               X  m    mm    X        X
+X          m        X          m   m               X
+X         m           X        m  m                X
+X  mmmmmmmmmmX          Xmmmmmmm m                 X
+X       m    mmmmmmmmmmmm  m    m                  X
+X      m    X         X X m    m                   X
+X     mmmmmmmmmmmmmmmmmmmm    m          XX   X    X
+X   Xm                       m                     X
+X   m            mmmmmmmmmmmm       X           X  X
+X  m  X  mmmmmmmm  X                               X
+X m     m                                          X
+Xmmmmmmm                                           X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Vergangene Zeit in Millisekunden: 343
