@@ -29,9 +29,9 @@ void printStartMaze(Map *map) {
 	for (int y = 0; y < MAZEHEIGHT; y++) {
 		std::cout << "X";
 		for (int x = 0; x < MAZEWIDTH; x++){
-			if ((*map)(x, y)->cost == Map::Cell::COST_UNWALKABLE)
+			if ((*map)(y, x)->cost == Map::Cell::COST_UNWALKABLE)
 				std::cout << "X";
-			else if ((*map)(x, y)->cost == 2)
+			else if ((*map)(y, x)->cost == 2)
 				std::cout << "Y";
 			else
 				std::cout << " ";
@@ -144,7 +144,7 @@ int main(){
 	list<Map::Cell *> agentpath;
 	list<Map::Cell *> tmppath;
 
-	//Map *map = new Map(MAZEWIDTH, MAZEHEIGHT);
+	
 	Map *map = new Map(MAZEHEIGHT, MAZEWIDTH);
 	//(*map).
 	//more readable 
@@ -172,7 +172,7 @@ int main(){
 
 	//print test start maze
 #ifdef DISPLAY
-	//printStartMaze(map);
+	printStartMaze(map);
 
 	printDynMaze(dyn_maze, MAZEHEIGHT);
 #endif
@@ -269,7 +269,7 @@ int main(){
 #endif
 	}
 
-	Planner p(map, (*map) (oldgoalx, oldgoaly), (*map) (primestartx, primestarty));
+	Planner p(map, (*map) (oldgoaly, oldgoalx), (*map) (primestarty, primestartx));
 	
 	p.replan();
 	goals.push_back(p);
