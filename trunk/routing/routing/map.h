@@ -36,7 +36,7 @@ namespace DStarLite
 							/**
 							 * @var  int  hash "constant" (may need to change if width exceeds this value)
 							 */
-							static const double C;
+							static const int C;
 
 							/**
 							 * Hashes cell based on coordinates.
@@ -44,8 +44,7 @@ namespace DStarLite
 							 * @param   Cell*
 							 * @return  size_t
 							 */
-							//size_t operator()(Cell* c) const;
-							double_t operator()(Cell* c) const;
+							size_t operator()(Cell* c) const;							
 							
 					};
 

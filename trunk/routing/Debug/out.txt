@@ -1,0 +1,499 @@
+Agent 1 moves.
+0:4
+Agent 1 moves.
+1:4
+Agent 1 moves.
+2:4
+Agent 1 moves.
+3:3
+Agent 0 moves.
+3:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 1 moves.
+4:2
+Agent 0 moves.
+4:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 1 moves.
+5:1
+Agent 0 moves.
+5:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 1 moves.
+6:0
+Agent 0 moves.
+6:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+7:3
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+7:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+8:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+8:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+9:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+9:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+10:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+10:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+11:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+11:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+12:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+12:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+13:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+13:3
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+13:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+14:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+14:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+15:2
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+15:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+15:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+16:3
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+16:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+16:6
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+17:4
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+17:7
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+18:4
+Agent 3 waits.
+Agent 0 moves.
+18:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+18:8
+Agent 2 moves.
+19:4
+Agent 3 waits.
+Agent 0 moves.
+19:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+19:9
+Agent 2 moves.
+20:4
+Agent 3 waits.
+Agent 0 moves.
+20:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+20:6
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+20:10
+Agent 2 moves.
+21:4
+Agent 3 waits.
+Agent 0 moves.
+21:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+21:7
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+21:8
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+21:11
+Agent 2 moves.
+22:4
+Agent 3 waits.
+Agent 0 moves.
+22:5
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+22:9
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+22:12
+Agent 2 moves.
+23:4
+Agent 3 waits.
+Agent 0 moves.
+23:6
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+23:10
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+23:13
+Agent 2 moves.
+24:4
+Agent 3 waits.
+Agent 0 moves.
+24:7
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+24:11
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+24:14
+Agent 2 moves.
+25:5
+Agent 3 waits.
+Agent 0 moves.
+25:8
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+25:12
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+25:15
+Agent 2 moves.
+26:6
+Agent 3 waits.
+Agent 0 moves.
+26:9
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+26:13
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+26:16
+Agent 2 moves.
+27:6
+Agent 3 waits.
+Agent 0 moves.
+27:10
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+27:14
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+27:17
+Agent 2 moves.
+28:6
+Agent 3 waits.
+Agent 0 moves.
+28:11
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+28:15
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+28:16
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 0 moves.
+28:17
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 3 moves.
+28:18
+Agent 2 moves.
+29:6
+Agent 3 waits.
+Agent 0 moves.
+29:12
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+30:6
+Agent 3 waits.
+Agent 0 moves.
+30:13
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+31:6
+Agent 3 waits.
+Agent 0 moves.
+31:14
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+32:6
+Agent 3 waits.
+Agent 0 moves.
+32:15
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+33:6
+Agent 3 waits.
+Agent 0 moves.
+33:16
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+34:7
+Agent 3 waits.
+Agent 0 moves.
+34:17
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+35:7
+Agent 3 waits.
+Agent 0 moves.
+35:18
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+36:7
+Agent 3 waits.
+Agent 0 moves.
+36:19
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+37:7
+Agent 3 waits.
+Agent 0 moves.
+37:20
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+38:7
+Agent 3 waits.
+Agent 0 moves.
+38:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+39:7
+Agent 3 waits.
+Agent 0 moves.
+39:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+40:7
+Agent 3 waits.
+Agent 0 moves.
+40:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+41:7
+Agent 3 waits.
+Agent 0 moves.
+41:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+42:8
+Agent 3 waits.
+Agent 0 moves.
+42:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+43:8
+Agent 3 waits.
+Agent 0 moves.
+43:21
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+44:8
+Agent 3 waits.
+Agent 0 moves.
+44:22
+Agent 1 waits.
+Agent 2 waits.
+Agent 3 waits.
+Agent 2 moves.
+45:9
+Agent 3 waits.
+Agent 2 moves.
+46:10
+Agent 3 waits.
+Agent 2 moves.
+47:11
+Agent 3 waits.
+Agent 2 moves.
+48:12
+Agent 3 waits.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X      A             X             X               X
+X     .X                                        X  X
+X    .   ....S...               X                  X
+X  X.   .     .  .            X                    X
+XS.................S......               XX        X
+X               .  .....  .                    X   X
+X                .   .  .  ........    X           X
+X            X    .   .  .         ........X       X
+X                  A  .X  .  X             ...     X
+X                   .  .   .          X       .    X
+X                X   .  .   .                  .   X
+X   X                 .  .  X.            X     .  X
+X                   X  .  .   .                  A X
+X                     X .  .   .                   X
+X            X          X.  .   .                  X
+X                         .  .   .                 X
+X           X         X X  . .    .                X
+X                           ..     .     XX   X    X
+X   X                        G      .              X
+X                                   X.          X  X
+X     X            X                  .            X
+X                                      ......      X
+X                                            A     X
+X              X                            X      X
+X                 X X                              X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Vergangene Zeit in Millisekunden: 265

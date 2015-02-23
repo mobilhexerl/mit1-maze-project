@@ -11,15 +11,15 @@ XSI-conformant systems. */
 #include <ctime>
 #include "planner.h"
 
-#define MAZEHEIGHT 250
-#define MAZEWIDTH  500
+#define MAZEHEIGHT 25
+#define MAZEWIDTH  50
 #define DIRECTIONS  4
 #define MAZEDENSITY 0.40
 #define WALLSTOREADD 40
-#define GOALS       15
-#define AGENTS      15
+#define GOALS       4
+#define AGENTS      4
 //#define DISPLAY
-//#define COLLISION
+#define COLLISION
 //#define COLLISION_DISPLAY
 //#define BLOCKING_DISPLAY
 //#define DEBUG
@@ -448,7 +448,7 @@ int main(){
 					printDynAgentMaze(dyn_maze, MAZEHEIGHT);
 #endif
 				}
-				else if (agent_path[z][i][j] == BLOCK) {
+				else if (blocked_maze[i][j] != EMPTY) {
 					std::cout << "Agent " << z << " waits." << std::endl;
 #ifdef BLOCKING_DISPLAY
 					printDynBlockingMaze(blocked_maze, MAZEHEIGHT);
