@@ -11,13 +11,13 @@ XSI-conformant systems. */
 #include <ctime>
 #include "planner.h"
 
-#define MAZEHEIGHT 2500
-#define MAZEWIDTH  5000
+#define MAZEHEIGHT 250
+#define MAZEWIDTH  500
 #define DIRECTIONS  4
 #define MAZEDENSITY 0.40
 #define WALLSTOREADD 40
-#define GOALS       100 
-#define AGENTS      100
+#define GOALS       15
+#define AGENTS      15
 //#define DISPLAY
 //#define COLLISION
 //#define COLLISION_DISPLAY

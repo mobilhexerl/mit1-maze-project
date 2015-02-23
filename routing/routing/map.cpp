@@ -24,7 +24,9 @@ const double Map::Cell::COST_UNWALKABLE = DBL_MAX;
 /**
  * @var  int  hash "constant" (may need to change if map width exceeds this value)
  */
-const int Map::Cell::Hash::C = 1000000;
+//const int Map::Cell::Hash::C = 1000000;
+
+const double Map::Cell::Hash::C = 1000000000000000;
 
 /**
  * Constructor.
@@ -258,7 +260,7 @@ unsigned int Map::Cell::y()
  * @param   Cell*
  * @return  size_t
  */
-size_t Map::Cell::Hash::operator()(Cell* c) const
+double_t Map::Cell::Hash::operator()(Cell* c) const
 {
 	return Cell::Hash::C * c->y() + c->x();
 }
