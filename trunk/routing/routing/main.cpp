@@ -18,10 +18,10 @@ XSI-conformant systems. */
 #define WALLSTOREADD 40
 #define GOALS       4
 #define AGENTS      4
-//#define DISPLAY
+#define DISPLAY
 #define COLLISION
-//#define COLLISION_DISPLAY
-//#define BLOCKING_DISPLAY
+#define COLLISION_DISPLAY
+#define BLOCKING_DISPLAY
 //#define DEBUG
 
 void printStartMaze(Map *map) {
@@ -96,9 +96,11 @@ void printDynAgentMaze(int dyn_maze[][MAZEHEIGHT], int dim1){
 		std::cout << "X";
 		for (int x = 0; x < MAZEWIDTH; x++){
 			if (dyn_maze[x][y] == 2)
-				std::cout << "X";				
-			else if (dyn_maze[x][y] == 8)
-				std::cout << "B";			
+				std::cout << "X";
+			else if (dyn_maze[x][y] == 6)
+				std::cout << "A";
+			else if (dyn_maze[x][y] == 9)
+				std::cout << ".";			
 			else
 				std::cout << " ";
 
@@ -114,27 +116,17 @@ void printDynAgentMaze(int dyn_maze[][MAZEHEIGHT], int dim1){
 	//end print agent_maze
 }
 
-void printDynBlockingMaze(int dyn_maze[][MAZEHEIGHT], int dim1){
+void printDynBlockingMaze(int blocked_maze[][MAZEHEIGHT], int dim1){
 	for (int x = 0; x < MAZEWIDTH + 2; x++)
 		std::cout << "X";
 	std::cout << std::endl;
 	for (int y = 0; y < MAZEHEIGHT; y++) {
 		std::cout << "X";
 		for (int x = 0; x < MAZEWIDTH; x++){
-			if (dyn_maze[x][y] == 2)
-				std::cout << "X";
-			else if (dyn_maze[x][y] == 4)
-				std::cout << "G";
-			else if (dyn_maze[x][y] == 5)
-				std::cout << "S";
-			else if (dyn_maze[x][y] == 6)
-				std::cout << "A";
-			else if (dyn_maze[x][y] == 8)
-				std::cout << "b";
-			else if (dyn_maze[x][y] == 9)
-				std::cout << ".";
+			if (blocked_maze[x][y] == 1)
+				std::cout << " ";			
 			else
-				std::cout << " ";
+				std::cout << "B";
 
 		}
 		std::cout << "X" << std::endl;
@@ -441,12 +433,20 @@ int main(){
 						dyn_maze[i][j] = MOVE;
 					blocked_maze[i][j] = z;
 
-					if (j > 0 && blocked_maze[i][j - 1] == z && agent_path[z][i][j] == MOVE){
-						blocked_maze[i][j-1] = EMPTY;					
-					}
+					if (j > 0 && blocked_maze[i][j - 1] == z)  
+						blocked_maze[i][j-1] = EMPTY;
+					else if (j < MAZEHEIGHT - 2 && blocked_maze[i][j + 1] == z)
+						blocked_maze[i][j + 1] = EMPTY;
+					else if (i > 0 && blocked_maze[i - 1][j] == z)
+						blocked_maze[i - 1][j] = EMPTY;
+					else if (i < MAZEWIDTH - 1 && blocked_maze[i + 1][j] == z)
+						blocked_maze[i + 1][j] = EMPTY;
+					
 #ifdef COLLISION_DISPLAY
 					printDynAgentMaze(dyn_maze, MAZEHEIGHT);
 #endif
+
+
 				}
 				else if (blocked_maze[i][j] != EMPTY) {
 					std::cout << "Agent " << z << " waits." << std::endl;
@@ -462,6 +462,8 @@ int main(){
 	}
 		
 	printDynMaze(dyn_maze, MAZEHEIGHT);
+	std::cout << "Blocking Maze " << std::endl;
+	printDynBlockingMaze(blocked_maze, MAZEHEIGHT);
 #endif
 	
 	zeit2 = clock();
