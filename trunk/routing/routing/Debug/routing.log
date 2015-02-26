@@ -1,4 +1,4 @@
-﻿Der Buildvorgang wurde am 25.02.2015 15:50:11 gestartet.
+﻿Der Buildvorgang wurde am 26.02.2015 20:46:18 gestartet.
      1>Projekt "C:\Users\Arrr\Documents\Visual Studio 2013\Projects\routing\routing\routing.vcxproj" auf Knoten "2", Rebuild Ziel(e).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp map.cpp math.cpp planner.cpp
@@ -18,4 +18,4 @@
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:02.62
+Verstrichene Zeit 00:00:02.37
